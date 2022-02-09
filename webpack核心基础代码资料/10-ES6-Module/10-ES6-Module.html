@@ -45,6 +45,11 @@ import xxx from "path";
 注意点:
 一个模块只能使用一次默认导出, 多次无效
 默认导出时, 导入的名称可以和导出的名称不一致
+
+2.3 混合导入导出
+export {a, b}
+export default c;
+import c, {a, b} from "path";
 -->
 </body>
 </html>
