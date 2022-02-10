@@ -10,6 +10,16 @@
 mini-css-extract-plugin是一个专门用于将打包的CSS内容提取到单独文件的插件
 > 前面我们通过style-loader打包的CSS都是直接插入到head中的
 
+webpack打包的过程中，有一个环节叫提取js中的css成单独文件。
+在这之前，开发环境（development）是使用style-loader，这样引入js的时候，就会把样式插入到style当中，因为style-loader内部实现了HMR功能，故在开发环境中的打包性能就会更好，打包速度就会更快
+
+但是在生产环境（production）中，更建议使用mini-css-extract-plugin将css文件单独提取出来。
+那么为什么要把css文件单独提取出来呢？
+我个人做了以下分析：
+
+将css文件单独提取出来，那么就可以先在页面的最前面引入这个单独的css文件，浏览器先解析了css文件就会生成cssom从而与dom tree生成渲染树从而以最快速度渲染出页面(为什么要将css文件放在头部)。如果放在js文件中，不仅会增加js文件体积，使js文件的下载时间延长，而且进行解析js文件往往都是在dom树生成之后，那么这两者增加的延迟会大大影响渲染速度，削弱用户体验。
+
+
 2.mini-css-extract-plugin使用
 https://webpack.js.org/plugins/mini-css-extract-plugin/
 2.1mini-css-extract-plugin安装
