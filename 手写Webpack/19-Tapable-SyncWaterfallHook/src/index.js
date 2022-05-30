@@ -8,7 +8,7 @@ class Lesson {
             vue: new SyncWaterfallHook(["des"]),
         }
     }
-    tap(){
+    tap() {
         // 订阅消息
         this.hooks.vue.tap("zs", function (des) {
             console.log("zs", des);
@@ -23,7 +23,7 @@ class Lesson {
             return "3";
         });
     }
-    call(){
+    call() {
         // 发布消息
         this.hooks.vue.call("vue课程上线了");
     }

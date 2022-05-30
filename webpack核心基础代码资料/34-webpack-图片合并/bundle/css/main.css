@@ -1,0 +1,47 @@
+.animal{
+    width: 128px;
+    height: 128px;
+}
+.animal1{
+    background-image: url(http://localhost:63342/Git-Webpack/Webpack/34-webpack-图片合并/bundle/images/sprite.animal.png);
+    background-position: 0px 0px;
+    background-size: 256px 256px;
+}
+.animal2{
+    background-image: url(http://localhost:63342/Git-Webpack/Webpack/34-webpack-图片合并/bundle/images/sprite.animal.png);
+    background-position: -128px 0px;
+    background-size: 256px 256px;
+}
+.animal3{
+    background: url(http://localhost:63342/Git-Webpack/Webpack/34-webpack-图片合并/bundle/images/animal3.jpg) no-repeat;
+}
+.animal4{
+    background-image: url(http://localhost:63342/Git-Webpack/Webpack/34-webpack-图片合并/bundle/images/sprite.animal.png);
+    background-position: 0px -128px;
+    background-size: 256px 256px;
+}
+
+.header{
+    width: 84px;
+    height: 84px;
+}
+.header1{
+    background-image: url(http://localhost:63342/Git-Webpack/Webpack/34-webpack-图片合并/bundle/images/sprite.headers.png);
+    background-position: 0px 0px;
+    background-size: 168px 168px;
+}
+.header2{
+    background-image: url(http://localhost:63342/Git-Webpack/Webpack/34-webpack-图片合并/bundle/images/sprite.headers.png);
+    background-position: -84px 0px;
+    background-size: 168px 168px;
+}
+.header3{
+    background-image: url(http://localhost:63342/Git-Webpack/Webpack/34-webpack-图片合并/bundle/images/sprite.headers.png);
+    background-position: 0px -84px;
+    background-size: 168px 168px;
+}
+.header4{
+    background-image: url(http://localhost:63342/Git-Webpack/Webpack/34-webpack-图片合并/bundle/images/sprite.headers.png);
+    background-position: -84px -84px;
+    background-size: 168px 168px;
+}

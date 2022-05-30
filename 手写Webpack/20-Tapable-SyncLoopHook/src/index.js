@@ -1,5 +1,5 @@
-// const { SyncLoopHook } = require('tapable');
-const SyncLoopHook = require('./SyncLoopHook.js');
+const { SyncLoopHook } = require('tapable');
+// const SyncLoopHook = require('./SyncLoopHook.js');
 
 class Lesson {
     constructor() {
@@ -9,8 +9,12 @@ class Lesson {
         }
         this.index = 0;
     }
-    tap(){
+    tap() {
         // 订阅消息
+        this.hooks.vue.tap("ls", function (des) {
+            console.log("ls", des);
+            // return "2";
+        });
         this.hooks.vue.tap("zs", (des) => {
             console.log("zs", des);
             // return "1";
@@ -26,7 +30,7 @@ class Lesson {
             // return "3";
         });
     }
-    call(){
+    call() {
         // 发布消息
         this.hooks.vue.call("vue课程上线了");
     }
